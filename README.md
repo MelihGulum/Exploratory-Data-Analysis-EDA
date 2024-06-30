@@ -22,3 +22,6 @@ EDA projects will be uploaded to this repository. The projects will focus on iss
 
 6. **Glassdoor**
     * The [dataset](https://www.kaggle.com/datasets/rashikrahmanpritom/data-science-job-posting-on-glassdoor) was created from data science job postings on Glassdoor using Selenium.
+
+7. **Pokemon**
+    * In this project, pokemon data which taken from [Kaggle](https://www.kaggle.com/datasets/abcsds/pokemon) was examined. This notebook will cover EDA and Data Preprocessing steps. 
