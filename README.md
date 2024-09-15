@@ -24,4 +24,7 @@ EDA projects will be uploaded to this repository. The projects will focus on iss
     * The [dataset](https://www.kaggle.com/datasets/rashikrahmanpritom/data-science-job-posting-on-glassdoor) was created from data science job postings on Glassdoor using Selenium.
 
 7. **Pokemon**
-    * In this project, pokemon data which taken from [Kaggle](https://www.kaggle.com/datasets/abcsds/pokemon) was examined. This notebook will cover EDA and Data Preprocessing steps. 
+    * In this project, pokemon data which taken from [Kaggle](https://www.kaggle.com/datasets/abcsds/pokemon) was examined. This notebook will cover EDA and Data Preprocessing steps.
+  
+8. **Automated EDA Tools**
+   * This project benchmarks three popular Automated Exploratory Data Analysis (EDA) tools—Sweetviz, Pandas Profiling, and AutoViz—across three datasets of varying size and complexity: the Titanic dataset, House Prices - Advanced Regression Techniques, and the New York City Taxi Trip Duration dataset. By comparing metrics such as runtime, memory usage, and CPU performance, the goal is to evaluate each tool's efficiency and scalability. The project aims to provide insights into the strengths and weaknesses of each EDA tool, helping data practitioners choose the most suitable tool based on the nature of their dataset and analysis requirements.
