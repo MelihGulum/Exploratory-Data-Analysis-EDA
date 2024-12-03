@@ -1,0 +1,154 @@
+/* Column Cards */
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+	font-size: 10px;
+	font-family: "Open Sans", sans-serif;
+}
+
+/* Float three columns side by side */
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 10px 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  text-align: center;
+  background-color: #f1f1f1;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 30px 0 rgba(0,0,0,0.4);
+}
+
+img {
+  border-radius: 10px 10px 10px 10px;
+}
+
+    /*button */
+
+.btn {
+ position: relative;
+ font-size: 17px;
+ text-transform: uppercase;
+ text-decoration: none;
+ padding: 1em 2.5em;
+ display: inline-block;
+ border-radius: 6em;
+ transition: all .2s;
+ border: none;
+ font-family: inherit;
+ font-weight: 500;
+ color: black;
+ background-color: white;
+}
+
+.btn:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+ transform: translateY(-1px);
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+ content: "";
+ display: inline-block;
+ height: 100%;
+ width: 100%;
+ border-radius: 100px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ transition: all .4s;
+}
+
+.btn::after {
+ background-color: #fff;
+}
+
+.btn:hover::after {
+ transform: scaleX(1.4) scaleY(1.6);
+ opacity: 0;
+}
+
+
+/**/
+h2{
+    color:black;
+    line-height:50px;
+    font-size:20px;
+}
+p{
+    color:black;
+    line-height:30px;
+    font-size:15px;
+}
+
+textarea {
+  resize: none;
+  color:black;
+}
+
+.box-shadow-positive{
+      font-family: cursive, sans-serif;
+      background-color: #2ecc71;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 2px 2px 20px 2px #7fecad;
+    }
+.box-shadow-negative{
+      font-family: cursive, sans-serif;
+      background-color: #FF6666;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 2px 2px 20px 2px #FF0000;
+    }
+
+
+a.active{
+    /*background:#f21313;*/
+}

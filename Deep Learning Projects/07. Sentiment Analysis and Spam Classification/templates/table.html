@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="static/img/ai.ico" type="image/gif">
+    <link rel="stylesheet" href="static/css/dataset.css">
+    <title>{% block title %} NLP | Datasets {% endblock %}</title>
+</head>
+
+<body>
+<div class="container">
+      <div class="header_wrap">
+          <div class="num_rows">
+				<div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+			 		<select class  ="form-control" name="state" id="maxRows">
+						<option value="5572">Show ALL Rows</option>
+						 <option value="50">50</option>
+						 <option value="100">100</option>
+						 <option value="1000">1000</option>
+                    </select>
+			  	</div>
+          </div>
+          <div class="homepage">
+            <button class ="btn" onclick="window.open('http://127.0.0.1:5000/', '_self')">HOME</button>
+            <button class ="btn" onclick="window.open('http://127.0.0.1:5000/about', '_self')">ABOUT</button>
+            <button class ="btn" onclick="window.open('http://127.0.0.1:5000/contact', '_self')">CONTACT</button>
+          </div>
+
+          <div class="tb_search">
+            <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+          </div>
+      </div>
+
+    <table class="table table-striped table-class" id= "table-id">
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Message</th>
+            </tr>
+         </thead>
+        <tbody>
+            {% for value in myData%}
+            <tr>
+                <td>{{ value[0]}}</td>
+                <td>{{ value[1]}}</td>
+                <td>{{ value[2]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!--		Start Pagination -->
+    <div class='pagination-container'>
+        <nav>
+            <ul class="pagination">
+                <!--	Here the JS Function Will Add the Rows -->
+            </ul>
+        </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 91 entries</div>
+
+</div> <!-- 		End of Container -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/dataset.js') }}"></script>
+</body>
+
+</html>
+
+

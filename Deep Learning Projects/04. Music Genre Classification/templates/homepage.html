@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+
+    {% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="static/css/homepage.css">
+
+    <div class="h_container">
+        <div class="center">
+            <h1>MGC</h1><br>
+        </div>
+        <p>Welcome this application is based on Deep Learning and Flask. It is created because of to
+            learn music genres easily which you do not know the genre.</p><br>
+        <div class="how-to">
+            <p>How to use Music Genre Classifier?</p><br>
+            <ol>
+              <li>Load the song you want to learn which genre is</li>
+              <li>To get better prediction result make sure that audio files extension ends with ".wav" or ".mp3"</li>
+              <li>Click the "Learn" button</li>
+            </ol>
+        </div><br>
+        <div class="center">
+            <form action="prediction" method="POST">
+                <label for="audio-upload">Select a file:</label>
+                <input type="file" id="audio-upload" name="myfile" required="required" accept=".wav,.mp3">
+                <a id="link" download style="display: none">shouldnt be visible</a><br><br>
+                <ul id="myList">
+
+                </ul>
+                <button class="button" formtarget="_self"><span>Learn </span></button>
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/upload_audio.js') }}"></script>
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/display_audio.js') }}"></script>
+{% endblock %}

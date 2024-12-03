@@ -1,0 +1,7 @@
+Flask==2.0.1
+Flask_MySQLdb==0.2.0
+keras==2.6.0
+librosa==0.8.1
+numpy==1.19.5
+pydub==0.25.1
+tensorflow==2.6.0

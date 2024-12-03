@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="icon" href="static/img/ai.ico" type="image/gif">
+    <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+    <title>{% block title %}
+GENEREIC TITLE
+        {% endblock %}</title>
+</head>
+
+
+<body>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<header>
+
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="{{url_for('homepage')}}">Music<span> Genre</span> Classifier</a></h1>
+                <ul>
+                    <li><a href="{{url_for('homepage')}}">Home</a></li>
+                    <li><a href="{{url_for('project')}}">Project</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+<br><br>
+    {% block content %}
+
+{% endblock %}
+</header>
+
+
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p class="about_us">We both are studying in Computer Science in NKU.
+                        We decide to do our final year project about Deep Learning and Web Programming.
+                        This is why we did this classifier.</p>
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-instagram"></span></a>
+                        <a href="#"><span class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2>ADRESS</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Corlu/Tekirdag</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">0123456789</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">asd@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right box">
+                <br><br><br><br><img src="static/img/MGC-logo.png" alt="logo" />
+            </div>
+        </div>
+        <div class="bottom">
+        <center>
+          <span class="credit">Created By <a href="#">MELIH</a> | </span>
+          <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+        </center>
+      </div>
+    </footer>
+
+ <script type="text/javascript"
+         src="{{ url_for('static', filename='js/header.js') }}"></script>
+
+</body>
+</html>

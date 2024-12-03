@@ -1,0 +1,43 @@
+{%extends 'layouts/base.html'%}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/contact.css">
+    {% endblock %}
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+
+{% block content %}
+<section class="section-contact">
+			<div class="container">
+				<h2 class="main_header">Contact</h2>
+				<p>Fill out the form below to get in touch with one of our team members. We will try to get back to you within 48 hours. If we do not reply within that time please feel free to use the form again.</p>
+
+				<form method="POST">
+					<div class="form-group">
+						<label for="firstname">First name</label>
+						<input type="text" name="firstname" id="firstname" required class="form-element" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="lastname">Last name</label>
+						<input type="text" name="lastname" id="lastname" required class="form-element" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="email">Email address</label>
+						<input type="email" name="email" id="email" required class="form-element" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone</label>
+						<input type="text" name="phone" id="phone" class="form-element" placeholder="" />
+					</div>
+					<div class="form-group full">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" required class="form-element" placeholder=""></textarea>
+					</div>
+					<div class="submit-group">
+						<input type="submit" value="SEND MESSAGE" />
+					</div>
+				</form>
+			</div>
+		</section>
+{% endblock %}

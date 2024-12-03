@@ -1,0 +1,5 @@
+Flask==2.0.1
+joblib==1.1.0
+keras==2.6.0
+pandas==1.4.1
+scikit_learn==1.1.1

@@ -1,0 +1,193 @@
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    color:#535151;
+    font-family: 'lato' ,'Arial' , sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;    
+}
+
+.second-main{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5));
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 240%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: #f0e3e3;
+}
+
+h3
+{
+    color:#f9d89c!important;
+}
+
+.result-img
+{
+    width: 500px;
+    height: 250px;
+    border : 2px solid #3b6978;
+}
+
+th
+{
+    color: #6495ed;
+    background-color: white;
+}
+
+.header
+{
+        width: 100%;
+        padding-top: 5px;
+
+}
+.info
+{
+        padding: 5px;
+        width: 100%;
+        margin-top: 1%;
+
+
+}
+
+.header-text
+{
+    letter-spacing: 1px;
+}
+
+.table-custom
+{
+    width: 60%;
+    height: 200px;
+        background-color: 	#8c92ac;
+
+}
+
+tr:hover
+{
+    background-color: 	#97ffff;
+}
+td{
+    color:black;
+    font-weight: bold;
+}
+@media screen and (max-width: 615px)
+{
+
+    th
+    {
+        font-size: 17px!important;
+    }
+
+    td
+    {
+        font-size: 16px!important;
+    }
+    .header-text
+    {
+        letter-spacing: 1px;
+        font-size: 22px!important;    
+    }
+
+    .result-img
+    {
+        width: 200px;
+        height: 200px;
+        border : 2px solid #3b6978;
+    }
+    .header
+    {
+        margin-top: 5%!important;
+    }
+    .info
+    {
+        margin-top: 10%!important;
+    }
+
+    .table-custom
+    {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 615px) and (max-width: 915px)
+{
+    .result-img
+    {
+        width: 250px;
+        height: 250px;
+        border : 2px solid #3b6978;
+    }
+}
+
+.main-nav {
+    
+    list-style: none;
+    float: right;
+    margin-left: 10px
+    
+}
+
+.main-nav li {
+    display: inline-block;
+    
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    letter-spacing: 2px;
+    padding: 8px 0 8px 0;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #f9d89c;
+    
+}
+
+
+.myFile {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+.myFile input[type="file"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  font-size: 100px;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+
+
+
+

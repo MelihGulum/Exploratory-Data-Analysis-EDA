@@ -1,0 +1,7 @@
+Flask==2.2.2
+flask_sqlalchemy==3.0.2
+librosa==0.8.1
+matplotlib==3.5.1
+numpy==1.20.3
+opencv_python==4.5.5.62
+tensorflow==2.6.0

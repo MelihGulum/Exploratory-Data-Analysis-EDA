@@ -1,0 +1,46 @@
+{%extends 'layouts/base.html'%}
+    {% block head %}
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/about.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% endblock %}
+
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h2 class="main_header">ABOUT US</h2>
+        </div>
+        <div class="sub-container">
+            <div class="teams">
+                <img src="{{ config.STATIC_FOLDER }}/images/about/profile_photo.png" alt="Developer 1">
+                <div class="name">Developer 1</div>
+                <div class="desig info">AI Engineer - Web Developer</div>
+                <div class="about info">Some text describes the person. </div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="teams">
+                <img src="{{ config.STATIC_FOLDER }}/images/about/profile_photo.png" alt="Developer 2">
+                <div class="name">Developer 2</div>
+                <div class="desig info">AI Engineer - Web Developer</div>
+                <div class="about info">Some text describes the person.  </div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

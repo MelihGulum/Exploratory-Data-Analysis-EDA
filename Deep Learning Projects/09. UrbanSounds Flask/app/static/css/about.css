@@ -1,0 +1,71 @@
+.container {
+    text-align: center;
+}
+.main_header {
+    line-height: 50px;
+    margin-bottom:16px
+}
+.sub-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:#FFF;
+    border-radius:16px;
+    -webkit-box-shadow:0px 6px 12px rgba(0,0,0,0.2);
+    box-shadow:0px 6px 12px rgba(0,0,0,0.2)
+}
+.teams {
+    margin: 10px;
+    padding: 22px;
+    max-width: 30%;
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+.teams:hover {
+    background: #ddd;
+    border-radius: 12px;
+}
+.teams img {
+    width: 100px;
+    height: 100px;
+}
+.name {
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.desig {
+    font-style: italic;
+    color: #888;
+}
+.about {
+    margin: 20px 0;
+    font-weight: lighter;
+    color: #4e4e4e;
+}
+.social-links {
+    margin: 14px;
+    font-size: 20px;
+}
+.social-links a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transition: .4s;
+}
+.social-links a:hover {
+    transform: scale(1.5);
+}
+.social-links a i {
+    color: #444;
+}
+@media screen and (max-width: 600px) {
+    .teams {
+        max-width: 100%;
+    }
+}

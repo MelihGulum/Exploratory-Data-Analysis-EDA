@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} NLP | Contact Us {% endblock %}</title>
+    <link rel="icon" href="static/img/ai.ico" type="image/gif">
+    <link rel="stylesheet" href="static/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
+</head>
+
+<body>
+<div class="contain">
+  <div class="wrapper">
+    <div class="form">
+      <h4 class="title">GET IN TOUCH</h4>
+      <h2 class="form-headline greetings">Send us a message</h2>
+
+      <form id="submit-form" action="/contact" method="post">
+        <p>
+          <input id="name" class="form-input" type="text" name="name" placeholder="Your Name*">
+          <small class="name-error"></small>
+        </p>
+
+        <p>
+          <input id="email" class="form-input" type="email" name="email" placeholder="Your Email*">
+          <small class="name-error"></small>
+        </p>
+
+        <p class="full-width">
+          <input id="company-name" class="form-input" type="text" name="company-name" placeholder="Company Name*" required>
+          <small></small>
+        </p>
+
+        <p class="full-width">
+          <textarea  minlength="20" id="message" cols="30" rows="16" name="message" placeholder="Your Message*" required></textarea>
+          <small></small>
+        </p>
+
+        <p class="full-width">
+          <input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
+        </p>
+
+        <p class="full-width">
+          <input type="submit" id="submit" class="submit-btn submit" value="Submit" onclick="checkValidations()">
+          <button class="reset-btn reset" onclick="reset()">Reset</button>
+        </p>
+      </form>
+    </div>
+
+    <div class="contacts contact-wrapper">
+      <div class="button_nav langWrap">
+        <button onclick="window.open('http://127.0.0.1:5000/', '_self')" class="home">HOME</button>
+        <button onclick="window.open('http://127.0.0.1:5000/about', '_self')" class="about">ABOUT</button>
+        <button onclick="window.open('http://127.0.0.1:5000/contact', '_self')" class="contact">CONTACT</button>
+        <button onclick="window.open('http://127.0.0.1:5000/project', '_self')" class="project">PROJECT</button>
+        <a href="#" language='english' class="active"><span class="flag-icon flag-icon-us"></span></a>
+        <a href="#" language='turkish' class=""><span class="flag-icon flag-icon-tr"></span></a>
+      </div>
+
+      <ul>
+        <li class="feedback">Your feedback is very important to us.</li>
+        <span class="hightlight-contact-info">
+          <li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> info@demo.com</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+90 123 456 7890</span></li>
+        </span>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/contact.js') }}"></script>
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/languageSwitcherContact.js') }}"></script>
+</html>

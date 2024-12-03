@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ config.STATIC_FOLDER }}/images/favicon.ico">
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/base.css">
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/dark_mode.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head %}
+
+    {% endblock %}
+    <title>{% block title %}GENEREIC TITLE{% endblock %}</title>
+</head>
+<body>
+    <div class="sidebar">
+            <div class="logo">
+                <h1>URBAN <em>SOUNDS</em> CLASSIFICATION</h1>
+            </div>
+            <div class="menu">
+                <a href="home">Home</a>
+                <a href="prediction">Prediction</a>
+                <a href="contact">Contact</a>
+                <a href="about">About</a>
+
+                  <label class="switch" id="switch">
+                    <i class="sun" id="theme-indicator"></i>
+                    <input type="checkbox" id="theme-switch" checked>
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+
+
+    </div>
+
+    <div class="main">
+
+        {% block content %}
+
+            {% endblock %}
+    </div>
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/dark_mode.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+.counter {
+	padding-top: 6.5rem;
+	padding-bottom: 5.375rem;
+	background-color: #262431;
+	text-align: center;
+}
+
+.counter #counter .cell {
+	display: inline-block;
+	width: 6.25rem;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	margin-bottom: 2rem;
+}
+
+.counter #counter .counter-value {
+	color: #f1f1f8;
+	font: 700 3.5rem/4.25rem "Montserrat", sans-serif;
+	vertical-align: middle;
+}
+
+.counter #counter .counter-info {
+	margin-bottom: 0;
+	color: #00c9db;
+	font: 400 1.30rem/1.25rem "Open Sans", sans-serif;
+	vertical-align: middle;
+}
+.counter {
+    padding-top: 6rem;
+    padding-bottom: 4.5rem;
+}
+
+.counter #counter .cell {
+    width: 8rem;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+}
+
+.counter #counter .counter-value {
+    font: 700 4.25rem/4.5rem "Montserrat", sans-serif;
+}

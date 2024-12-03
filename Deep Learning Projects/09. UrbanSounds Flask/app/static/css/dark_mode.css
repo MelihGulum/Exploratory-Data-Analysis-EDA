@@ -1,0 +1,50 @@
+#theme-indicator {
+    cursor: pointer;
+}
+
+body.dark {
+    background-color: #082032;
+    color: white !important; }
+
+body.dark .sidebar, body.dark .sub-container, body.dark .card, body.dark .section-contact .container form,
+ body.dark .card .card_header:after, body.dark .card .card_header:before{
+    background-color: #2C394B;
+}
+body.dark .sub-container, body.dark .card, body.dark .section-contact .container form{
+  -moz-box-shadow: 0px 6px 12px rgba(240, 240, 240, 0.2);
+  -webkit-box-shadow: 0px 6px 12px rgba(240, 240, 240, 0.2);
+  box-shadow: 0px 6px 12px rgba(240, 240, 240, 0.2);
+}
+
+body.dark .card .card_header:after, body.dark .card .card_header:before{
+    background-color: #2C394B;
+    border-bottom: 1px solid #00abcc;
+    border-top: 1px solid #00abcc;
+}
+body.dark .sub-container .info, body.dark .section-contact .container form label,
+    body.dark .sidebar .menu a, body.dark .link a{
+    color: white;
+}
+
+body.dark .sub-header, body.dark .main_header ,body.dark .social-links a i,body.dark .logo h1 {
+	background: linear-gradient(to right, #30CFD0 0%, #daebf7 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
+
+body.dark .sidebar .menu a:hover, body.dark .teams:hover{
+    background-color: #828f99;
+}
+body.dark .section-contact .container form .form-group .form-element{
+    background-color: #d9d9d9;
+}
+body.dark .section-contact .container form .form-group .form-element:focus{
+    background-color: white;
+}
+
+body.dark .table-custom th{
+    background-color: #374270;
+}
+body.dark .table-custom{
+    	background: linear-gradient(45deg, #366a96, #384996);
+}

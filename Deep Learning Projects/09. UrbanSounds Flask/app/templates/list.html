@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<table style = "width: 100%; display: flex; justify-content: center;">
+	{% for post in page %}
+  <tr>
+    <td>{{ post.firstname }}</td>
+    <td> {{ post.lastname }}</td>
+    <td>{{ post.phone }}</td>
+    <td>{{ post.email }}</td>
+    <td>{{ post.date_posted }}</td>
+    <td>{{ post.message }}</td>
+    <td>{{ post.id }}</td>
+
+  </tr>
+  {% endfor %}
+</table>
+<br>
+<table style = "width: 100%; display: flex; justify-content: center;">
+	{% for post in errors %}
+  <tr>
+    <td>{{ post.time }}</td>
+    <td> {{ post.error }}</td>
+    <td>{{ post.url }}</td>
+
+
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

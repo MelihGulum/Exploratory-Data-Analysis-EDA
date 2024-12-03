@@ -1,0 +1,94 @@
+*{
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    font-family: "Open Sans", sans-serif;
+    }
+
+.section-contact .container{
+    max-width:1280px;
+    margin:0 auto;
+    padding-left:32px;
+    padding-right:32px
+    }
+@media (min-width: 768px){
+    .section-contact .container{
+        padding-left:64px;
+        padding-right:64px
+            }
+        }
+@media (min-width: 1024px){
+    .section-contact .container{
+        padding-left:128px;padding-right:128px
+            }
+        }
+
+.section-contact .container p{
+    margin-bottom:32px
+    }
+.section-contact .container form{,
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns:1fr;
+    grid-template-columns:1fr;
+    grid-gap:16px;
+    background-color:#FFF;
+    padding:32px;
+    border-radius:16px;
+    -webkit-box-shadow:0px 6px 12px rgba(0,0,0,0.2);
+    box-shadow:0px 6px 12px rgba(0,0,0,0.2)
+    }
+ @media (min-width: 768px){
+    .section-contact .container form{
+        -ms-grid-columns:(1fr)[2];
+        grid-template-columns:repeat(2, 1fr)
+            }
+         }
+ .section-contact .container form .form-group.full{
+    grid-column:1 / -1
+    }
+ .section-contact .container form .form-group label{
+    display:block;
+    margin-bottom:5px;
+    color:#888;font-size:14px
+    }
+ .section-contact .container form .form-group .form-element{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;outline:none;
+    border:none;display:block;
+    width:100%;
+    border-radius:8px;
+    padding:12px 16px;
+    background-color:#F3F3F3;
+    -webkit-transition:0.4s;transition:0.4s
+    }
+.section-contact .container form .form-group .form-element:focus{
+    -webkit-box-shadow:0px 0px 6px rgba(0,0,0,0.2);
+    box-shadow:0px 0px 6px rgba(0,0,0,0.2);
+    background-color:#FFF;
+    }
+.section-contact .container form .form-group textarea{
+    resize:none;
+    min-height:100px
+    }
+.section-contact .container form .submit-group{
+     grid-column:1 / -1;text-align:right
+     }
+.section-contact .container form .submit-group input[type="submit"]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:none;
+    outline:none;
+    background:none;
+    padding:12px 16px;
+    background-color:#FF9FDB;
+    border-radius:8px;
+    color:#FFF;
+    cursor:pointer;
+    -webkit-transition:0.4s;
+    transition:0.4s
+    }
+ .section-contact .container form .submit-group input[type="submit"]:hover{
+    background-color:#9B75D7
+ }

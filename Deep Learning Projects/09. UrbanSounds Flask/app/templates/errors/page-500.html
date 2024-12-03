@@ -1,0 +1,18 @@
+{%extends 'layouts/base.html'%}
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/errors.css">
+    {% endblock %}
+
+{% block content %}
+<div id="main">
+    	<div class="fof">
+            <h2>500</h2>
+            <h1>Something went wrong</h1>
+            <p>We're experiencing some trouble on our end. Please try again in the near future</p>cation.</p>
+    	</div>
+</div>
+{% endblock %}

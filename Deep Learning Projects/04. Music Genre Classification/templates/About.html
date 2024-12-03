@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/about.css">
+    <link rel="icon" href="static/img/ai.ico" type="image/gif">
+    <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+{%extends 'header.html'%}
+
+    {% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+
+<!--d-flex justify-content-center : for aligning it to center -->
+<div class="container">
+  <div class="row d-flex justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img class="img-fluid" src="static/img/mel.jpeg">
+          </div>
+          <div class="team-content">
+            <h3 class="name">Melih GULUM</h3>
+            <h4 class="title">Junior Data Scientist & Web Developer</h4>
+          </div>
+          <ul class="social">
+            <li><a href="#" class="fab fa-facebook" aria-hidden="true"></a></li>
+            <li><a href="#" class="fab fa-twitter" aria-hidden="true"></a></li>
+            <li><a href="#" class="fab fa-google-plus" aria-hidden="true"></a></li>
+            <li><a href="#" class="fab fa-linkedin" aria-hidden="true"></a></li>
+          </ul>
+        </div>
+    </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="static/img/enes.jpeg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">M. ENES OZKAN</h3>
+          <h4 class="title">Junior Data Scientist & Web Developer</h4>
+        </div>
+          <ul class="social">
+            <li><a href="#" class="fab fa-facebook" aria-hidden="true"></a></li>
+            <li><a href="#" class="fab fa-twitter" aria-hidden="true"></a></li>
+            <li><a href="#" class="fab fa-google-plus" aria-hidden="true"></a></li>
+            <li><a href="#" class="fab fa-linkedin" aria-hidden="true"></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

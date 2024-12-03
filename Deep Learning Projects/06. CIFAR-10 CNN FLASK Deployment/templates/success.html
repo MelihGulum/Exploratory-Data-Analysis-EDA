@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/styleSucc.css')}}>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Results Page</title>
+
+        <style type="text/css">
+            th{
+                text-align: center;
+                font-size: 20px;
+            }
+
+            td{
+                text-align: center;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "second-main" style = "height: 100% , width : 100%;">
+            <nav>
+                <ul style = "padding-right: 2%;" class = "main-nav">
+                    <li><a href ="/">HomePage</a></li>                
+                </ul>
+               
+            </nav>
+            <div class = "header">
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <h3 class="header-text">Uploaded Image</h3>
+                </row>
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <img class = "result-img" src={{url_for('static', filename = 'images/'+ img)}}>
+                </row>
+            </div>
+
+            <div class = "info">
+            
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <h3 class = "header-text">Model Prediction</h3>
+                </row>
+                <row style = "width: 100%; display: flex; justify-content: center;">
+                    <table class="table-bordered text-light table-custom">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Class</th>
+                            <th>Probability</th>
+                        </tr>
+                        <tr>
+                            <td>1st</td>
+                            <td>{{ predictions.class1 }}</td>
+                            <td>{{ predictions.prob1 }} %</td>
+                          </tr>
+                          <tr>
+                            <td>2nd</td>
+                            <td>{{ predictions.class2 }}</td>                                                         
+                            <td>{{ predictions.prob2 }} %</td>                                                      
+                        </tr>                                                                                                               
+                        <tr>
+                            <td>3rd</td>
+                            <td>{{ predictions.class3 }}</td>
+                            <td>{{ predictions.prob3 }} %</td>
+                          </tr>
+                    </table>
+                </row>
+            </div>
+        </div>
+    </body>
+</html>

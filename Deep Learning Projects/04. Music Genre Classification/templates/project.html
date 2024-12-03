@@ -1,0 +1,61 @@
+
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/project.css">
+    <link rel="icon" href="static/img/ai.ico" type="image/gif">
+    <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+
+</head>
+
+{%extends 'base.html'%}
+
+    {% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="p_container">
+    <div class="center">
+        <br><h1>Project</h1><br>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+            <h3>DEEP LEARNING</h3><br>
+            <img src="static/img/deep_learning.jpg" alt="Deep Learning" width="280" height="150"/>
+            <br><br><p>In Deep Learning section ı want to talk about 2 different part of
+            Music Genre Classifier Project.</p>
+            <ul>
+                <li>The first part, which is the most important part of whole project,  is <strong style="color:crimson;">Preprocessing</strong>.</li>
+                <li> The second part is training the model with the specific features where came from
+                    preprocessing step of data.</li>
+            </ul>
+            <br><hr><br>
+            <p><strong style="color:crimson;">Preprocessing: </strong>I use <i style="color:black;">Librosa</i> library for the
+            feature extraction. These features are such as MFCC's, Chroma, RMS...</p><br>
+            <p><strong style="color:crimson;">Training The Model: </strong>Model based on CNN architecture.</p>
+
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+            <h3>WEB PROGRAMMING</h3><br>
+            <img src="static/img/flask.png" alt="Flask" width="280" height="150"/>
+            <br><br><p>Flask is a micro web framework written in Python. It is classified as a <strong style="color:crimson;">microframework</strong> because it does not require particular tools or libraries.
+            The <i style="color:black;">“micro”</i> in microframework means Flask aims to keep the core simple but extensible.</p>
+
+            <!-- works for quarter(5) of br-->
+            <hr style="height:6px; visibility:hidden;" />
+            <br><br><hr><br>
+            <p><strong style="color:crimson;">Deployment: </strong>In this project main usage of Flask library is combine web programming and Deep Learning.
+                In home page the generator of uploaded music genre's is actually our Deep Learning model.</p>
+
+        </div>
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}

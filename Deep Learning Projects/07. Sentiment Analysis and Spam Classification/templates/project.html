@@ -1,0 +1,58 @@
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/project.css">
+    <link rel="icon" href="static/img/ai.ico" type="image/gif">
+    <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+</head>
+
+{%extends 'base.html'%}
+    {% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="p_container">
+
+    <div class="center">
+        <br><h1 class="title">PROJECT</h1><br>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+            <h3 class="sentiment_title">SENTIMENT ANALYSIS</h3><br>
+            <img src="/static/img/sentiment2.png" style="width:100%; height:150px;">
+            <br><br>
+            <p><strong style="color:crimson;">Preprocessing: </strong>
+                <ul>
+                    <li class="info1">The first thing to do is to clean the data. Such as '@' sign,
+                        uppercase lowercase conversion and vice versa ... </li>
+                    <li class="info2">Afterwards we generate Word2Vec from our training set. Then we transform W2V to embedding layer</li>
+                </ul>
+            </p><br><br><hr><br><br>
+            <p><strong style="color:crimson;">Training The Model: </strong></p>
+                 <p class="sentiment_model">Model based was on LSTM which is one of
+                the architecture in Deep Learning.</p><br><br>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+            <h3 class="spam_title">SPAM CLASSIFICATION</h3><br>
+                <img src="/static/img/spam2.png" style="width:100%;height:150px;">
+            <br><br>
+            <p><strong style="color:crimson;">Preprocessing: </strong></p>
+            <p class="info3"> In Spam Classification we extract the features with the
+                help of CountVectorizer. Then we fit the data.</p>
+            <br><br><br><br><br><br><br><hr><br>
+            <p><strong style="color:crimson;">Training The Model: </strong> </p>
+                <p class="spam_model">This classifer's data set is smaller than the other.
+                So model was built in Naive Bayes architecture, which belongs statistical Machine Learning </p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/languageSwitcherProject.js') }}"></script>
+{% endblock %}

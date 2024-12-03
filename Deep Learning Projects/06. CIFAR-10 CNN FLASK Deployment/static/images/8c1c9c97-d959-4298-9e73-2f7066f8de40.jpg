@@ -1,0 +1,90 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 10]><!--> <html class="no-js not-ie9" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+        <link rel="icon" href="/images/favicon.png" type="image/png"/>
+
+        <title>DK Find Out! | Fun Facts for Kids on Animals, Earth, History and more!</title>
+        <meta name="title" content="DK Find Out! | Fun Facts for Kids on Animals, Earth, History and more!" />
+        <meta name="description" content="Visit DK Find Out! to learn about dinosaurs, space, animals, nature &amp; more. Fun learning activities for kids with videos, quizzes &amp; galleries at DKFindOut.com" />
+        <meta property="og:title" content="DK Find Out! | Fun Facts for Kids on Animals, Earth, History and more!" />
+        <meta property="og:description" content="Visit DK Find Out! to learn about dinosaurs, space, animals, nature &amp; more. Fun learning activities for kids with videos, quizzes &amp; galleries at DKFindOut.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.dkfindout.com" />
+        <meta property="og:image" content="https://res.cloudinary.com/dk-find-out/image/upload/icons/DKfindout_summary_card.jpg" />
+        <meta property="og:site_name" content="DK Find Out!" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dkbooks" />
+        <meta name="twitter:creator" content="@dkbooks" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+        <link rel="stylesheet" href="/stylesheets/app.css?v=1">
+        <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/094e6af0-1d7b-46ca-908f-755ab013599d.css"/>
+        <script src="/environment.js"></script>
+        <script src="/resources/content.js"></script>
+        <script src="/javascripts/vendor.js"></script>
+        <script src="/javascripts/app.js?v=1"></script>
+
+        <meta name="google-site-verification" content="Lhd4vYdokS-_CfMFsYQuFrFIYNRELSnwGTJYEQm6Wu0" />
+        <meta name="msvalidate.01" content="1F8F4C800DDB73CBC6A6EFA2057DCB0E" />
+        <link id="href-uk" rel="alternate" hreflang="en-gb" href="https://www.dkfindout.com/uk/">
+        <link id="href-us" rel="alternate" hreflang="en-us" href="https://www.dkfindout.com/us/"> 
+        <link id="href-en-default" rel="alternate" hreflang="en" href="https://www.dkfindout.com/uk/">
+        <link id="href-flags" rel="alternate" hreflang="x-default" href="https://www.dkfindout.com/"> 
+        <!-- Start Visual Website Optimizer Asynchronous Code -->
+        <!-- <script type='text/javascript'>
+        var _vwo_code=(function(){
+        var account_id=143732,
+        settings_tolerance=2000,
+        library_tolerance=2500,
+        use_existing_jquery=false,
+        // DO NOT EDIT BELOW THIS LINE
+        f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+        </script> -->
+        <!-- End Visual Website Optimizer Asynchronous Code -->
+    </head>
+    <body itemscope itemtype="https://schema.org/WebPage">
+        <script>require('initialize');</script>
+
+        <!-- Google Tag Manager -->
+        <!-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TFNPDC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+        <script>
+        // Container for www
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TFNPDC');
+        </script> -->
+        <!-- End Google Tag Manager -->
+
+        <!-- Firebase initialisation -->
+        <script src="//www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyBAntY0cDSNTP_P9_IMxfK82yh5yoSS6hw",
+                authDomain: "dkfo-login-authentication.firebaseapp.com",
+                databaseURL: "https://dkfo-login-authentication.firebaseio.com",
+                storageBucket: "dkfo-login-authentication.appspot.com",
+                messagingSenderId: "471265752685"
+            };
+            firebase.initializeApp(config);
+        </script>
+
+        <!--Captacha-->
+        <script src="//www.google.com/recaptcha/api.js" async defer></script>
+
+        <!-- www.addthis.com code -->
+        <!-- <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57cfce2c07630e0a" async defer></script> -->
+
+    </body>
+</html>

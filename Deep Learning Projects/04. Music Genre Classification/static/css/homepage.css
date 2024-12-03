@@ -1,0 +1,92 @@
+.h_container {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+	background:#F9F9F9;
+	padding:25px;
+
+}
+h1{
+    color:crimson;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+.center{
+    text-align:center;
+}
+
+.h_container p{
+    color:black;
+    font-size:15px;
+}
+
+.h_container .how-to ol li {
+    color:black;
+    font-size:15px;
+}
+
+.h_container .how-to p{
+    color:crimson;
+    font-size:20px;
+}
+
+label {
+    color:crimson;
+    font-size:15px;
+}
+
+/*  Load file css */
+::-webkit-file-upload-button {
+  border-radius: 4px;
+  background-color: #222021;
+  color: #FFFFFF;
+  padding: 1em;
+}
+::-webkit-file-upload-button:hover{
+    background: #f12020;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #222021;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 165px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button:hover{
+    background: #f12020;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+

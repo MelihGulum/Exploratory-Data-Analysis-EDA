@@ -1,0 +1,60 @@
+{%extends 'layouts/base.html'%}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/prediction.css">
+    {% endblock %}
+
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+
+{% block content %}
+    <h2 class="main_header"> Prediction</h2><br>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h class="card_header">OPTION 1 - AUDIO</h>
+                <p>You can upload the wav file you want to predict which class it belongs to here.</p>
+                <p>Make sure the extension of the audio files ends with ".wav" for better prediction result.</p>
+                <div class="center">
+                    <form action="prediction" method="POST" enctype="multipart/form-data">
+                        <label for="audio-upload" class="custom-load"><i class="fa fa-cloud-upload"></i> Upload Audio</label>
+                        <input type="file" id="audio-upload" name="myfile" required="required" accept=".wav,.mp3">
+                        <ul id="myList" type="none"></ul>
+                        <button class="button" onClick='javascript:validator();' formtarget="_self"><span>Learn </span></button>
+                    </form>
+                 </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h class="card_header" >OPTION 2 - IMAGE</h>
+                <p>This option allows you to upload your audio file as png (spectrogram).</p>
+                <p style="margin-top:45px;margin-bottom:37px;">Recommended image extensions are ".png", ".jpg" and ".jpeg".</p>
+
+                <div class="center">
+                    <form action="prediction" method="POST" enctype="multipart/form-data">
+                        <label for="image-upload" class="custom-load"><i class="fa fa-cloud-upload"></i> Upload Image</label>
+                        <input type="file" id="image-upload" name="myfile" required="required" accept=".png, .jpg, .jpeg" >
+                        <br><br>
+                        <output id="result"></output>
+                        <button class="button" onClick='javascript:validator();' formtarget="_self"><span>Learn </span></button>
+                    </form>
+                 </div>
+            </div>
+        </div>
+    </div>
+<p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
+    {% block prediction %}
+
+    {% endblock %}
+
+
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/display_audio.js') }}"></script>
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/display_image.js') }}"></script>
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/prediction_table_validator.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,135 @@
+{%extends 'layouts/base.html'%}
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/home.css">
+    {% endblock %}
+
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+
+{% block content %}
+    <h2 class="main_header">URBAN SOUND CLASSIFIER</h2><br>
+
+    <p>We hear a great deal of different voices in our daily life. It is too easy for humans to classify this voices.
+    But what about computers, how can they classify the voices? Thanks to deep learning and a couple library, computers can do that.
+    </p>
+    <p class="link">The dataset that is used in this project is <a href="https://urbansounddataset.weebly.com/urbansound8k.html" target="_blank">UrbanSounds8k.</a>
+    Briefly, this dataset consists of 8732 labelled data and 10 classes. These classes are:</p>
+        <ul>
+            <li>Air Conditioner</li>
+            <li>Car Horn</li>
+            <li>Children Playing</li>
+            <li>Dog Bark</li>
+            <li>Drilling</li>
+            <li>Engine Idling</li>
+            <li>Gun Shot</li>
+            <li>Jackhammer</li>
+            <li>Siren</li>
+            <li>Street Music</li>
+        </ul>
+    <p>First and foremost, we have to convert the data to numerical values which is so computer can learn.
+    Librosa is used to do this on audio files. Librosa is one of the most powerful library that used in the Audio Signal Processing field of deep learning.
+    After that, we can readily do this with help of Tensorflow library. We train Tensorflow's CNN model with this preprocessed data. Let's dive deeper.</p>
+
+    <br><h class="sub-header">Librosa</h>
+    <p>We have already told that we have 10 classes and we are going to use Librosa for feature extractions of this audio files.
+    Mel-spectrogram will be used in this project as feature. But you can choose other features too, such as Chroma, RMS, MFCC and so on.
+    Simply, a mel spectrogram is a spectrogram where the frequencies are converted to the mel scale. Below you can see mel spectrograms for each class.
+    But do not forget, shown images are just one data for the classes and rest of them may or may not be same.</p>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/0_air-conditioner.png" style="width:100%">
+          <div class="text">Air Conditioner</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/1_car-horn.png" style="width:100%">
+          <div class="text">Car Horn</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/2_children-playing.png" style="width:100%">
+          <div class="text">Children Playing</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/3_dog-barking.png" style="width:100%">
+          <div class="text">Dog Barking</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/4_drilling.png" style="width:100%">
+          <div class="text">Drilling</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/5_engine-idling.png" style="width:100%">
+          <div class="text">Engine Idling</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">7 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/6_gun-shot.png" style="width:100%">
+          <div class="text">Gun Shot</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">8 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/7_jackhammer.png" style="width:100%">
+          <div class="text">Jackhammer</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">9 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/8_siren.png" style="width:100%">
+          <div class="text">Siren</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">10 / 10</div>
+          <img src="{{ config.STATIC_FOLDER }}/images/slider/9_street-music.png" style="width:100%">
+          <div class="text">Street Music</div>
+        </div>
+    </div>
+
+    <br><h class="sub-header">CNN</h>
+    <p>Convolutional Neural Network, also known as convnets or CNN, is a well-known method in computer vision applications.
+        It is a class of deep neural networks that are used to analyze visual imagery.
+        Convolutional Neural networks are designed to process data through multiple layers of arrays.
+        This type of neural networks is used in applications like image recognition or face recognition.
+        The dominant approach of CNN includes solutions for problems of recognition.</p>
+
+    <p>CNN architecture is used to classify urban sounds. You can see the image of the model architecture used for classification in the figure below.
+        The model basically consist of Convolutional Layers, BatchNormalization Layers, MaxPooling Layer and some other auxiliary layers.
+        First, the model starts with 2 Convolution Layers, followed by the Maxpooling Layer and the BatchNormalization Layer, respectively.
+        Then comes 4 identical blocks. These blocks consist of 2 Convolution Layers, MaxPooling Layer, BatchNormalization Layer and Dropout Layer respectively.
+        Afterwards, it is time to Flatten Layer. Finally, after 1 Dense and Dropout Layer the last Dense Layer is ready to predict the input. </p>
+
+    <div class="model_container">
+        <img class="model_architecture" src ="{{ config.STATIC_FOLDER }}/images/model/model_architecture.png" alt="Model Architecture" style="width:100%;">
+    </div>
+
+    <p>The accuracy and loss during training are as follows. Training accuracy is almost 99% and validation accuracy is 95% (on the left).
+        Training loss is 3% and validation loss is 2% (on the right). Besides that test accuracy is 94.5%.</p>
+
+    <div class="training_container">
+        <div class="images">
+            <img class="model_architecture" src ="{{ config.STATIC_FOLDER }}/images/model/accuracy.png" alt="Tranining Accuracy" style="width:100%;">
+        </div>
+        <div class="images">
+            <img class="model_architecture" src ="{{ config.STATIC_FOLDER }}/images/model/loss.png" alt="Training Loss" style="width:100%;">
+        </div>
+    </div>
+    <br><br>
+
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/class_images_slides.js') }}"></script>
+{% endblock %}

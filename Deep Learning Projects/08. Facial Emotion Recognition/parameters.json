@@ -1,0 +1,16 @@
+{
+   	"emotion_labels": [
+		"Angry",
+		"Fear",
+		"Happy",
+		"Neutral",
+		"Sad"
+   	],
+	"base_dir": "images/",
+	"image_name": "neutral.jpg",
+	"okay_list": [
+		"Happy",		
+		"Fear",
+		"Neutral"
+	]
+}

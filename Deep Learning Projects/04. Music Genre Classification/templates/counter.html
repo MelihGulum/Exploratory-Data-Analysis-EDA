@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="static/css/counter.css">
+     <script type="text/javascript"
+         src="{{ url_for('static', filename='js/counter.js') }}"></script>
+</head>
+
+<body>
+
+<!-- Statistics -->
+<div class="counter" id="statistics">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>STATISTICS</h2>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 3rem;">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <!-- Counter -->
+                <div id="counter">
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="1000"&nbsp>1</div>
+
+                        <p class="counter-info">Total Music</p>
+                    </div>
+
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="750">1</div>
+                        <p class="counter-info">Training Set</p>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="250">1</div>
+                        <p class="counter-info">Testing Set</p>
+                    </div>
+                    <div class="cell">
+                        <div class="counter-value number-count" data-count="79.73">1</div>
+                        <p class="counter-info">Accuracy (%)</p>
+                    </div>
+                </div>
+                <!-- end of counter -->
+
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of counter -->
+<!-- end of statistics -->
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+{%extends 'base.html'%}
+
+    {% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="static/css/homepage.css">
+
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="/static/img/sentiment.png" style="width:100%; height:250px;">
+            <h2 class="sentiment_title">Sentiment Analysis</h2>
+            <p class="sentiment_description">Could not you decide the sentence is whether good or bad? We know it is difficult to decides sometimes.
+                Let us help you with our Deep Learning model which has %79 Accuracy.</p><br><br>
+            <form action="prediction" method="POST">
+                <textarea id="myText" name="text" rows="4" cols="50" placeholder="Your Sentence"></textarea>
+                <br><br>
+                {% if prediction=="POSITIVE"%}
+                <div class="box-shadow-positive">
+                    <p>{{prediction}}</p>
+                    <p>{{score}}</p>
+                    <p>{{message}}</p>
+                </div><br>
+
+                {% elif prediction=="NEGATIVE"%}
+                <div class="box-shadow-negative">
+                    <p>{{prediction}}</p>
+                    <p>{{score}}</p>
+                    <p>{{message}}</p>
+                </div><br>
+                {% endif %}
+                <button onclick="sentiment_alert()" class="btn"> Learn</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="/static/img/spam.jpeg" style="width:100%;height:250px;">
+            <h2 class="spam_title">Spam Classification</h2>
+            <p class="spam_description">Did you ever take ridiculous message from the person who you do not know?
+                If your answer "yes", than this message probably is spam. Do you want to know which one is spam?</p><br><br>
+            <form action="predict" method="POST">
+                <textarea id="myText" name="spam_text" rows="4" cols="50" placeholder="Your Sentence"></textarea>
+                <br><br>
+
+                {% if prediction == 1%}
+                <div class="box-shadow-positive">
+                    <h2>Spam</h2>
+                </div><br>
+
+                {% elif prediction == 0%}
+                <div class="box-shadow-negative">
+                    <h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
+                </div><br>
+                {% endif %}
+                <button class="btn btn2"> Learn</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="/static/img/splitting_data.png" style="width:100%;height:250px;">
+            <h2 class="dataset_title">About Datasets</h2>
+            <p class="dataset_description">We use two different dataset in these projects.
+                Sentiment dataset consist of 1.6 million data. On the other hand the other dataset, spam dataset, has 5572 data.</p>
+            <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
+            <form action="dataset" method="POST">
+                <br> <br> <br> <br> <br> <br> <br> <br>
+                <button class="btn" name="data" value="spam" style="margin-right:20px;"> SPAM </button>
+                <button onclick="dataset_alert()" class="btn btn3" name="data" value="sentiment"> SENTIMENT </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+     src="{{ url_for('static', filename='js/languageSwitcher.js') }}"></script>
+{% endblock %}

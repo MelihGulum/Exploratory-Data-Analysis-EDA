@@ -1,0 +1,37 @@
+{%extends 'prediction.html'%}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/prediction.css">
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/predictionSuccess.css">
+    {% endblock %}
+
+    {% block prediction %}
+    <row style = "width: 100%; display: flex; justify-content: center;">
+        <table id="table"  class="table-custom">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Class</th>
+                    <th>Probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1st</td>
+                    <td>{{ predictions.class1 }}</td>
+                    <td>{{ predictions.prob1 }} %</td>
+                </tr>
+                <tr>
+                    <td>2nd</td>
+                    <td>{{ predictions.class2 }}</td>
+                    <td>{{ predictions.prob2 }} %</td>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td>{{ predictions.class3 }}</td>
+                    <td>{{ predictions.prob3 }} %</td>
+                </tr>
+            </tbody>
+        </table>
+    </row>
+    {% endblock %}

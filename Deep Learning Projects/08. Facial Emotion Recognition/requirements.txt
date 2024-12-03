@@ -1,0 +1,4 @@
+keras==2.6.0
+mysql_connector_repackaged==0.3.1
+numpy==1.22.2
+opencv_python==4.5.5.62

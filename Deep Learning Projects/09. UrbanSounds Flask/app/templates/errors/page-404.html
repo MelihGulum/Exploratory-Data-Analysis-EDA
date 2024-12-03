@@ -1,0 +1,18 @@
+{%extends 'layouts/base.html'%}
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ config.STATIC_FOLDER }}/css/errors.css">
+    {% endblock %}
+
+{% block content %}
+<div id="main">
+    	<div class="fof">
+                <h2>404</h2>
+                <h1>Oops. Page Not Found</h1>
+                <p>That page does not exist. Please try a different location.</p>
+    	</div>
+</div>
+{% endblock %}

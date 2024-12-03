@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
+        
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <title>CIFAR-10</title>
+        <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+		
+		<style>
+			.content {
+			  max-width: 500px;
+			  margin: auto;
+			  }
+			.bg-img{
+				width: 100%;
+				height: 100vh;
+				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7));
+				background-size: cover;
+				background-position: center;
+			}
+			
+		</style>
+
+
+    </head>
+	
+    <body>
+	<div class="bg-img">
+	<div class="content">
+        <div class = "index-main">
+        <br><br>
+        <div style = "width : 100%; padding-top : 5%;">
+            <div class = "header-content">
+                 <h1 style = "text-align: center;color: white"><span class="header-content-text">CIFAR-10</span></h1>
+            </div>
+        </div>
+
+        <div class="upload-section">
+
+            <div class="upload-file">
+                <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="file-form-input" type="file" , name = "file"/>
+                    <button class="btn btn-lg">Upload</button>
+                </form>
+            </div>
+            <br>
+            <div class="uploadOR">
+                <span>OR</span>
+            </div>
+            <br>
+            <div class="upload-link">
+                <form class = "link-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="link-form-input" type="text" ,maxlength="1000" , name = "link" placeholder="Paste the image URL"/>
+                    <button class="btn btn-lg">Proceed</button>
+                </form>
+            </div>
+            <div class = "header-content-sub">
+                    <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
+            </div>
+        </div>
+
+        <div class = "footer">
+            <div class = "header-content-sub">
+                    <p style = "text-align: center;color: white" class="header-content-info">The dataset that used in this project is CIFAR-10. The model was trained with CNN architecture.
+                        Below you can see the classes of the dataset's.</p>
+            </div>
+            <div class = "header-content-sub">
+                        <ul style = "text-align: center;color:#f4f7c5; width:30%;" class="header-content-info">
+                          <li>Dog</li>
+                          <li>Cat</li>
+                          <li>Horse</li>
+                          <li>Deer</li>
+                          <li>Frog</li>
+                        </ul>
+                            <ul style = "text-align: center;color:#f4f7c5; width:30%;" class="header-content-info">
+                          <li>Airplane</li>
+                          <li>Truck</li>
+                          <li>Automobile</li>
+                          <li>Ship</li>
+                          <li>Bird</li>
+                        </ul>
+
+            </div>
+        </div>
+	     </div>  
+	</div>			 
+	</div>
+    </body>
+</html>
