@@ -1,0 +1,6 @@
+bucket_name       = "my-terraform-create-s3-example-bucket"
+bucket_acl        = "private"
+bucket_ownership  = "BucketOwnerPreferred"
+enable_versioning = "Enabled"
+#logging_bucket    = "my-terraform-create-s3-example-bucket"
+environment = "development"

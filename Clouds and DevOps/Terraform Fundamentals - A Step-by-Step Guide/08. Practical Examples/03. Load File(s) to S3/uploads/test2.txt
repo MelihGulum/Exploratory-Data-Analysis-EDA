@@ -1,0 +1,1 @@
+Test1 text file for uploading objects to AWS S3.
