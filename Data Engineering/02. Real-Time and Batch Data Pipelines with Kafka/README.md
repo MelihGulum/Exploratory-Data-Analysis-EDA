@@ -37,6 +37,59 @@ Real-Time and Batch Data Pipelines with Kafka/
 ├── init.sql
 ├── requirements.txt
 ```
+## **About the Dataset 📊**
+The dataset used in this project is synthetically generated to simulate real-world scenarios of stock prices and sales trends. It contains 527,040 records, representing minute-level data for a year, starting from January 1, 2024. The dataset was created using the following attributes and logic:
+```python
+import pandas as pd
+import numpy as np
+from datetime import datetime
+
+num_records = 527040
+start_time = datetime(2024, 1, 1, 0, 0)
+
+timestamps = pd.date_range(start=start_time, periods=num_records, freq="min")
+ids = [f"{i+1}" for i in range(num_records)]
+
+# Generate Stock Prices
+def generate_stock_price(timestamps, min_price=1.0):
+    base_price = 100
+    trend = 0.0002
+    volatility = 2
+    prices = []
+    current_price = base_price
+    for i in range(len(timestamps)):
+        current_price += np.random.normal(0, volatility) + trend
+        current_price = max(current_price, min_price)
+        prices.append(np.round(current_price, 2))
+    return prices
+
+# Generate Sales Trends
+def generate_sales(timestamps):
+    base_sales = 200
+    seasonality_amplitude = 50
+    sales = []
+    for timestamp in timestamps:
+        day_of_year = timestamp.timetuple().tm_yday
+        seasonal_effect = seasonality_amplitude * np.sin(2 * np.pi * (day_of_year / 365))
+        noise = np.random.normal(0, 5)
+        sales_value = base_sales + seasonal_effect + noise
+        sales.append(np.round(sales_value, 2))
+    return sales
+
+stock_price = generate_stock_price(timestamps)
+sales_trend = generate_sales(timestamps)
+
+data = {
+    "id": ids,
+    "timestamp": timestamps,
+    "stock_price": stock_price,
+    "sales_trend": sales_trend,
+}
+
+synthetic_data = pd.DataFrame(data)
+synthetic_data.to_parquet("synthetic_data.parquet", index=False)
+print("Data saved as Parquet.")
+```
 
 
 ## **Key Points 📌**
