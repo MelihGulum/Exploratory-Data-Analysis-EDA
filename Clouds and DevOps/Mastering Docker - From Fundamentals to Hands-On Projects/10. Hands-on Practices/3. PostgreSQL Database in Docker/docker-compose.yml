@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:latest
+    restart: unless-stopped
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: DB_USER
+      POSTGRES_PASSWORD: DB_PASSWORD
+      POSTGRES_DB: DB_NAME
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persist data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro  # Mount the init.sql file
+
+volumes:
+  postgres_data:  # Named volume for PostgreSQL data persistence
+

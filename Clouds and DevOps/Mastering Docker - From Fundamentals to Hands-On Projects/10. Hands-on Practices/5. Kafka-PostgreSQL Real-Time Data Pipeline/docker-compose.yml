@@ -1,0 +1,86 @@
+networks:
+  kafka_network:
+    driver: bridge
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:5.0.0
+    restart: unless-stopped
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_SYNC_LIMIT: 2
+    networks:
+      - kafka_network
+
+  kafka:
+    container_name: kafka
+    hostname: kafka
+    image: confluentinc/cp-kafka:5.0.0
+    restart: unless-stopped
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+    depends_on:
+      - zookeeper
+    networks:
+      - kafka_network
+
+
+  producer:
+    container_name: producer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka
+    environment:
+      BOOTSTRAP_SERVERS: kafka:29092
+    command: sh -c "sleep 10 && python producer/producer.py"
+    networks:
+      - kafka_network
+
+  consumer:
+    container_name: consumer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka
+    environment:
+      BOOTSTRAP_SERVERS: kafka:29092
+    command: sh -c "sleep 12 && python consumer/consumer.py"
+    networks:
+      - kafka_network
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: DB_USER
+      POSTGRES_PASSWORD: DB_PASSWORD
+      POSTGRES_DB: DB_NAME
+    ports:
+      - "5432:5432"
+    networks:
+      - kafka_network
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+volumes:
+  postgres_data:
+    driver: local
+
