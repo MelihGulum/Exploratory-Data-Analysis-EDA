@@ -96,6 +96,7 @@ This collection not only demonstrates the application of advanced machine learni
 | Mastering Time Series Data Splitting Techniques and Visualizations |          Time Series Data Splitting          |                                                       Explore and visualize key time series data splitting techniques (Holdout, TimeSeriesSplit, Sliding Window, etc.) to understand their impact on model evaluation and forecasting accuracy                                                       |
 |                            SQL Tutorials                            |                SQL Tutorials                 |                                                     Learn and master essential SQL concepts, including querying databases, data manipulation, joins, subqueries, indexing, and optimization techniques, to efficiently manage and analyze data.                                                      |
 |            Terraform Fundamentals: A Step-by-Step Guide             |             Terraform Tutorials              | Learn the fundamentals of Terraform, including infrastructure as code, provisioning resources, managing cloud environments, and automating infrastructure deployment. This step-by-step guide will help you understand how to use Terraform to define, manage, and scale infrastructure efficiently. |
+|            Mastering Docker - From Fundamentals to Hands-On Projects   |             Docker Tutorials              | A comprehensive guide that takes you from understanding Docker basics to implementing real-world projects with practical, hands-on experience. |
 
 <br>
 <div align="center">
@@ -105,6 +106,7 @@ This collection not only demonstrates the application of advanced machine learni
 |                  Project Name                  |        Task         |                                            Objective                                            | Prominent Techniques / Tools |
 |:----------------------------------------------:|:-------------------:|:-----------------------------------------------------------------------------------------------:|:----------------------------:|
 | Terraform Fundamentals: A Step-by-Step Guide   | Terraform Tutorials | Master Terraform to automate infrastructure deployment and manage cloud resources efficiently.  |          Terraform           |
+| Mastering Docker - From Fundamentals to Hands-On Projects   | Docker Tutorials | To provide a comprehensive and practical guide to mastering Docker by covering fundamental concepts and hands-on projects for real-world applications.  |          Docker           |
 
 
 ## **Future Work**
