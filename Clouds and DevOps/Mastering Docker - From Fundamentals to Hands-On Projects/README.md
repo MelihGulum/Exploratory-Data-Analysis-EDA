@@ -3,7 +3,7 @@
 Welcome to the **Docker Tutorial** repository! This guide is designed to take you from beginner to intermediate proficiency with Docker, focusing on practical skills and best practices. Whether you're new to containerization or looking to solidify your Docker knowledge, this repository provides a structured, hands-on approach to learning.
 
 <div align="center"> 
-    <img src="https://github.com/user-attachments/assets/fe286bf9-395d-419e-aeee-060630c58be5" alt="Screenshots" width="100%" height="30%">
+    <img src="https://github.com/user-attachments/assets/b30015a3-1a5e-4efe-9de8-061ab0ed57c1" alt="Screenshots" width="100%" height="30%">
 </div>
 
 
